@@ -1,0 +1,13 @@
+:root{
+    --primary-text: #030C01;
+    --background-button : linear-gradient(101.67deg, #E8E81C 0%, #42ED13 100%);
+    --border-button:linear-gradient(101.67deg, #E8E81C 0%, #42ED13 100%);
+    --background-reviews: #030C01;
+    --background-button-feedback: #fff;
+    --border-btn: rgba(3, 12, 1, 0.15);
+    --footer-background: #EEEE60;
+    --backgroung-btn-active: #4E544D;
+    --color-btn-active: #fff;
+    --background-reviews-hover: #D9FBCF;
+    --background-reviews-active: #7AF259;
+}
