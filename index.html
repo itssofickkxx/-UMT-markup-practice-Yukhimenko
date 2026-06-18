@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
    <header class="header-wrapper">
@@ -30,7 +31,7 @@
    <main>
     <section class="hero-wrapper">
         <div class="container">
-            <div class="hero-container">
+            <div class="hero-container" data-aos="fade-right" data-aos-duration="1000">
             <h1 class="section-title">Brighten Your Day with Our Stunning Bouquets</h1>
             <p class="hero-description">At Flora, we believe that every occasion deserves a beautiful bouquet.Our expertly crafted arrangements are designed to bring joy and elegance to your celebrations.</p>
             <button class="hero-button" type="button">Explore Our Bestsellers</button>
@@ -38,19 +39,19 @@
         </div>
     </section>
     <section class="section-wrapper">
-        <div class="container">
+        <div class="container" data-aos="fade-right" data-aos-duration="500">
             <div class="about-content">
             <div class="about-container">
             <svg width="96px" height="85px"><use href="./icons/frame-sptite.svg#Frame 2-2"></use></svg>
             <h2 class="section-title">Our Passion for Floral Artistry</h2>
             <p class="about-description">At Flora, we believe that every bouquet tells a story. Our team meticulously crafts each arrangement, blending creativity with the freshest blooms to create stunning pieces for every occasion.</p>
             </div>
-            <img class="about-image" src="./image/florist-arranging.jpg" alt="Female"/>
+            <img class="about-image" data-aos="fade-left" data-aos-duration="500" src="./image/florist-arranging.jpg" alt="Female"/>
             </div>
         </div>
     </section>
     <section class="section-wrapper">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="section-title products-title">Top-Selling Bouquets</h2>
             <ul class="products-list">
                 <li class="products-item">
@@ -91,7 +92,7 @@
             </div>
      </section>
      <section class="section-wrapper">
-        <div class="container container-catalog">
+        <div class="container container-catalog"  data-aos="zoom-in" data-aos-duration="1000">
             <h2 class="section-title products-title">Bouquets</h2>
             <p class="catalog-description">Explore our stunning selection of fresh flower bouquets.</p>
             <ul class="catalog-list">
@@ -140,7 +141,7 @@
         </div>
     </section> 
     <section class="section-wrapper">
-        <div class="container">
+        <div class="container" data-aos="fade-left" data-aos-duration="2000">
         <h2 class="section-title feedback-title">What our clients says</h2>
         <ul class="feedback-list">
             <li class="feedback-item">
@@ -167,7 +168,7 @@
         </div>
     </section>
     <section class="section-wrapper">
-        <div class="container">
+        <div class="container" data-aos="fade-right" data-aos-duration="1000">
         <div class="contact-container">
         <div class="contact-description-container">
         <p class="contact-text">Connect</p>
@@ -198,7 +199,7 @@
     </section>
    </main>
    <footer class="footer">
-    <div class="container">
+    <div class="container" data-aos="fade-up"data-aos-duration="2000">
     <div class="footer-container">
     <div class="logo-nav-container">
    <svg class="footer-logo"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
@@ -220,5 +221,7 @@
     
     </div>
    </footer>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="./script.js"></script>
 </body>
 </html>
