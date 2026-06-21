@@ -2,6 +2,10 @@
 @import "./color.css";
 @import "./fonts.css";
 
+html:has(body.menu-open){
+    overflow: hidden;
+}
+
 body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -366,6 +370,65 @@ h1,h2,h3{
     margin-top: 32px;
     padding-top: 32px;
 }
+
+/* Mobile-menu */
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    margin-top: 64px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    padding: 16px 20px;
+    overflow-y: auto;
+    transition: transform 300ms ease-in-out;
+    background: #fff;
+    justify-content: start;
+}
+.navigation-burger{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.menu-action-button{
+    font-weight: 500;
+    font-size: var(--font-size-sm); 
+    padding: 8px 20px;
+    background: var(--background-button);
+    border-radius: 100px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    max-width: 335px;
+    width: 100%;
+}
+.menu-icon-burger{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+.menu-icon-close{
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.burger-menu.is-open .menu-icon-burger{
+    opacity: 0;
+}
+.burger-menu.is-open .menu-icon-close{
+    opacity: 1;
+}
+.mobile-menu.is-open{
+    transform: translate(0);
+}
+
 /* Tablet styles */
 
 @media screen and (min-width: 768px){
@@ -387,17 +450,6 @@ h1,h2,h3{
     }
     .navigation{
         display: none;
-    }
-    .order-button{
-        font-weight: 500;
-        font-size: var(--font-size-sm);
-        padding: 8px 20px;
-        background: var(--background-button);
-        border-radius: 100px;
-        outline: none;
-        display: flex;
-        align-items: center;
-        margin-left: auto;
     }
     .order-button:hover,.order-button:focus{
         opacity: 50%;
@@ -478,6 +530,17 @@ h1,h2,h3{
 .footer .container{
     padding: 80px;
 }
+
+/* Mobile menu */
+.menu-action-button{
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+.mobile-menu{
+    text-align: center;
+}
 }
 
 /* Desktop styles */
@@ -511,6 +574,14 @@ h1,h2,h3{
     }
     .order-button{
         margin-left: 0;
+        font-weight: 500;
+        font-size: var(--font-size-sm);
+        padding: 8px 20px;
+        background: var(--background-button);
+        border-radius: 100px;
+        outline: none;
+        display: flex;
+        align-items: center;
     }
     .hero-container{
         width: 100%;
