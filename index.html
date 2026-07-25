@@ -8,13 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/svg+xml" href="./icons/frame-sptite.svg">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
    <header class="header-wrapper">
     <div class="container header-container">
-    <svg width="84px" height="36px"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
+    <a href="./index.html" class="logo-link" aria-label="Flora Home">
+        <svg width="84px" height="36px"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
+    </a>
         <nav class="navigation">
             <a class="nav-link menu-navigation-link" href="#about">About Us</a>
             <a class="nav-link menu-navigation-link" href="#bestsellers">Bestsellers</a>
@@ -23,7 +26,7 @@
             <a class="nav-link menu-navigation-link" href="#contacts">Contacts</a>
         </nav>
     <button class="order-button" type="button">Explore Bouquets</button>
-    <button class="burger-menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-button aria-label="Toggle mobile menu">
+    <button class="burger-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button aria-label="Toggle mobile menu">
         <svg aria-label="mobile menu toggle">
             <use href="./icons/menu.svg#menu" class="menu-icon-burger"></use>
             <use href="./icons/close.svg#icon" class="menu-icon-close" width="12" height="12" x="6" y="6"></use>
@@ -50,6 +53,7 @@
             <p class="about-description">At Flora, we believe that every bouquet tells a story. Our team meticulously crafts each arrangement, blending creativity with the freshest blooms to create stunning pieces for every occasion.</p>
             </div>
             <img class="about-image" data-aos="fade-left" data-aos-duration="500" 
+                 width="340" height="400"
                  src="./image/florist-arranging@1x.jpg" 
                  srcset="./image/florist-arranging@1x.jpg 1x, ./image/florist-arranging@2x.jpg 2x" 
                  alt="Florist arranging fresh flowers" />
@@ -62,6 +66,7 @@
             <ul class="products-list">
                 <li class="products-item bouquet-card" data-title="Spring Elegance" data-price="35" data-desc="Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring." data-img="./image/wonderful-flowers@1x.jpg" data-img2x="./image/wonderful-flowers@2x.jpg">
                     <img class="products-image" 
+                         width="335" height="280"
                          src="./image/wonderful-flowers@1x.jpg" 
                          srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" 
                          alt="Spring Elegance bouquet" />
@@ -70,6 +75,7 @@
                 </li>
                 <li class="products-item bouquet-card" data-title="Berry Chic" data-price="40" data-desc="Chic arrangement with deep rich hues, delicate roses and fragrant blossoms." data-img="./image/wedding-flowers@1x.jpg" data-img2x="./image/wedding-flowers@2x.jpg">
                     <img class="products-image" 
+                         width="335" height="280"
                          src="./image/wedding-flowers@1x.jpg" 
                          srcset="./image/wedding-flowers@1x.jpg 1x, ./image/wedding-flowers@2x.jpg 2x" 
                          alt="Berry Chic bouquet" />
@@ -78,6 +84,7 @@
                  </li>
                 <li class="products-item bouquet-card" data-title="Lavender Dream" data-price="55" data-desc="Soothing lavender tones for peaceful elegance and long-lasting joy." data-img="./image/flower-bouquet@1x.jpg" data-img2x="./image/flower-bouquet@2x.jpg">
                     <img class="products-image" 
+                         width="335" height="280"
                          src="./image/flower-bouquet@1x.jpg" 
                          srcset="./image/flower-bouquet@1x.jpg 1x, ./image/flower-bouquet@2x.jpg 2x" 
                          alt="Lavender Dream bouquet" />
@@ -162,20 +169,21 @@
                     <svg class="icon-contact" width="24" height="24"><use href="./icons/phone-sprite.svg#phone"></use></svg>
                     <div class="contact-content">
                     <p class="contact-list-label">Phone</p>
-                    <p class="contact-list-text">+1 (555) 123-4567</p>
+                    <a href="tel:+15551234567" class="contact-list-text contact-link">+1 (555) 123-4567</a>
                     </div>
                 </li>
                 <li class="address-item">
                     <svg class="icon-contact" width="24" height="24"><use href="./icons/map-sprite.svg#map"></use></svg>
                     <div class="contact-content">
                     <p class="contact-list-label">Store</p>
-                    <p class="contact-list-text">456 Floral Ave, Sydney NSW 2000 AU</p>
+                    <a href="https://maps.google.com/?q=456+Floral+Ave,+Sydney+NSW+2000+AU" target="_blank" rel="noopener noreferrer" class="contact-list-text contact-link">456 Floral Ave, Sydney NSW 2000 AU</a>
                     </div>
                 </li>
             </ul>
         </address>
         </div>
         <img class="contact-image" 
+             width="335" height="300"
              src="./image/florist-holding@1x.jpg" 
              srcset="./image/florist-holding@1x.jpg 1x, ./image/florist-holding@2x.jpg 2x" 
              alt="Florist holding bouquet" />
@@ -186,7 +194,9 @@
     <div class="container" data-aos="fade-up" data-aos-duration="2000">
     <div class="footer-container">
     <div class="logo-nav-container">
-   <svg class="footer-logo"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
+    <a href="./index.html" class="logo-link-footer" aria-label="Flora Home">
+        <svg class="footer-logo"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
+    </a>
     <nav class="navigation-footer">
         <a class="nav-link" href="#about">About Us</a>
         <a class="nav-link" href="#bestsellers">Bestsellers</a>
@@ -195,6 +205,7 @@
         <a class="nav-link" href="#contacts">Contacts</a>
     </nav>
     </div>
+
         <ul class="list-footer">
             <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon-footer"><use href="./icons/facebook-sprite.svg#Facebook"></use></svg></a></li>
             <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon-footer"><use href="./icons/instagram-sprite.svg#Instagram"></use></svg></a></li>
@@ -241,6 +252,17 @@
                 <label for="order-message" class="order-field-label">Message</label>
                 <textarea id="order-message" name="user-message" placeholder="Type your message..." class="order-field-textarea" rows="4"></textarea>
             </div>
+            <div class="order-form-checkbox-group">
+                <input type="checkbox" id="order-policy" name="user-policy" required class="visually-hidden custom-checkbox-input" />
+                <label for="order-policy" class="custom-checkbox-label">
+                    <span class="custom-checkbox-box">
+                        <svg class="custom-checkbox-icon" width="10" height="8" viewBox="0 0 10 8" fill="none">
+                            <path d="M1.5 4.5L3.5 6.5L8.5 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="custom-checkbox-text">I agree to the <a href="#" class="policy-link">Privacy Policy</a></span>
+                </label>
+            </div>
             <div class="order-btn-center">
                 <button type="submit" class="order-checkout-btn">Go to Checkout</button>
             </div>
@@ -256,7 +278,7 @@
         </button>
         <div class="product-details-flex">
             <div class="product-details-img-col">
-                <img id="modal-img" src="./image/wonderful-flowers@1x.jpg" srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" alt="Bouquet preview" class="product-details-img" />
+                <img id="modal-img" width="280" height="280" src="./image/wonderful-flowers@1x.jpg" srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" alt="Bouquet preview" class="product-details-img" />
             </div>
             <div class="product-details-info-col">
                 <h2 id="modal-title" class="product-details-title">Spring Elegance</h2>
