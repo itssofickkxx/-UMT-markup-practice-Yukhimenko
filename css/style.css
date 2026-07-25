@@ -164,13 +164,21 @@ h1,h2,h3{
     gap: 16px;
 }
 .products-image{
+    width: 100%;
     border-radius: 16px;
+    object-fit: cover;
+}
+.reviews-management {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
 }
 .reviews-dots {
     display: flex;
     gap: 8px;
-    justify-content: center; /* Центрує їх всередині рядка */
-    margin-top: 48px;
+    justify-content: center;
 }
 .reviews-dot {
     display: inline-block;
@@ -871,12 +879,23 @@ h1,h2,h3{
         max-width: 340px;
     }
     .products-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+        overflow-x: visible;
     }
     .products-item{
-    max-width: 340px;
-    flex-shrink: 0;
-}
+        max-width: 100%;
+        width: 100%;
+    }
+    .products-image{
+        height: 260px;
+    }
+    .reviews-arrows{
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+    }
     .catalog-list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -991,16 +1010,22 @@ h1,h2,h3{
     }   
 
     .products-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 32px;
+        overflow-x: visible;
     }
     .products-item{
-        max-width: 405px;
+        max-width: 100%;
+        width: 100%;
     }
-        .reviews-arrows{
+    .products-image{
+        height: 380px;
+    }
+    .reviews-arrows{
         display: flex;
         gap: 16px;
         justify-content: center;
-        margin-top: 24px;
     }
     .catalog-list{
         display: grid;
