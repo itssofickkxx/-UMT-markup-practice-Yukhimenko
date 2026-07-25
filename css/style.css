@@ -61,14 +61,16 @@ h1,h2,h3{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#fff;
-    width: 32px;
-    height: 32px;
+    background: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
     padding: 0;
+    cursor: pointer;
 }
 .burger-menu>svg{
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 .hero-wrapper{
     background-image: url(../image/hero@1x.jpg);
