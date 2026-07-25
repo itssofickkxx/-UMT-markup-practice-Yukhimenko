@@ -253,6 +253,19 @@ h1,h2,h3{
 }
 .catalog-item{
     width: 100%;
+    cursor: pointer;
+}
+.catalog-thumb{
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.catalog-image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
 }
 .feedback-title{
     text-align: center;

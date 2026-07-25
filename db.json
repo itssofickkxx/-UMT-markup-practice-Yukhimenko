@@ -104,9 +104,9 @@
       "title": "Royal Sunset",
       "price": 65,
       "category": "roses",
-      "description": "Warm orange and red rose sunset composition.",
-      "image": "./image/hero@1x.jpg",
-      "image2x": "./image/hero@2x.jpg"
+      "description": "Warm orange and red rose composition.",
+      "image": "./image/side-view-rose@1x.jpg",
+      "image2x": "./image/side-view-rose@2x.jpg"
     }
   ]
 }
