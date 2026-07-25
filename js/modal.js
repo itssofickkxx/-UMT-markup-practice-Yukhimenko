@@ -1,105 +1,110 @@
-// js/modal.js - Modal window control (backdrop, ESC close, scroll lock, dynamic modal data, form submit)
+// js/modal.js - Dual modal management: Order Modal (Header) and Product Details Modal
 
-const modalBackdrop = document.querySelector('#detail-modal');
-const closeModalBtn = document.querySelector('#close-modal-button');
-const modalTitle = document.querySelector('#modal-title');
-const modalPrice = document.querySelector('#modal-price');
-const modalDesc = document.querySelector('#modal-desc');
-const modalImg = document.querySelector('#modal-img');
-const orderForm = document.querySelector('.modal-order-form');
+const orderModal = document.querySelector('#header-order-modal');
+const detailsModal = document.querySelector('#detail-modal');
 
-export function openModal(data = {}) {
-  if (!modalBackdrop) return;
-
-  if (modalTitle && data.title) modalTitle.textContent = data.title;
-  if (modalPrice && data.price) modalPrice.textContent = `$${data.price}`;
-  if (modalDesc && data.description) modalDesc.textContent = data.description;
-  if (modalImg && data.image) {
-    modalImg.src = data.image;
-    if (data.image2x) {
-      modalImg.srcset = `${data.image} 1x, ${data.image2x} 2x`;
-    }
-    modalImg.alt = data.title || 'Bouquet';
-  }
-
-  modalBackdrop.classList.add('is-open');
-  document.body.classList.add('modal-open');
-  window.addEventListener('keydown', handleKeyDown);
-}
-
-export function closeModal() {
-  if (!modalBackdrop) return;
-  modalBackdrop.classList.remove('is-open');
+export function closeAllModals() {
+  const activeModals = document.querySelectorAll('.modal-background.is-open');
+  activeModals.forEach(m => m.classList.remove('is-open'));
   document.body.classList.remove('modal-open');
   window.removeEventListener('keydown', handleKeyDown);
 }
 
+export function openModalElement(modalEl) {
+  if (!modalEl) return;
+  closeAllModals();
+  modalEl.classList.add('is-open');
+  document.body.classList.add('modal-open');
+  window.addEventListener('keydown', handleKeyDown);
+}
+
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
-    closeModal();
+    closeAllModals();
   }
 }
 
+export function openProductDetails(data = {}) {
+  if (!detailsModal) return;
+
+  const titleEl = detailsModal.querySelector('#modal-title');
+  const priceEl = detailsModal.querySelector('#modal-price');
+  const descEl = detailsModal.querySelector('#modal-desc');
+  const imgEl = detailsModal.querySelector('#modal-img');
+
+  if (titleEl && data.title) titleEl.textContent = data.title;
+  if (priceEl && data.price) priceEl.textContent = `$${data.price}`;
+  if (descEl && data.description) descEl.textContent = data.description;
+  if (imgEl && data.image) {
+    imgEl.src = data.image;
+    if (data.image2x) {
+      imgEl.srcset = `${data.image} 1x, ${data.image2x} 2x`;
+    }
+    imgEl.alt = data.title || 'Bouquet';
+  }
+
+  openModalElement(detailsModal);
+}
+
+export function openOrderModal() {
+  if (!orderModal) return;
+  openModalElement(orderModal);
+}
+
 export function initModalListeners() {
-  if (!modalBackdrop) return;
-
-  // Backdrop click close
-  modalBackdrop.addEventListener('click', (event) => {
-    if (event.target === modalBackdrop) {
-      closeModal();
-    }
-  });
-
-  // Close button click close
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', closeModal);
-  }
-
-  // Delegate clicks on catalogue & order buttons to open modal
-  document.addEventListener('click', (event) => {
-    const orderBtn = event.target.closest('.order-bouquet-btn, .menu-action-button, .hero-button, .order-button');
-    if (orderBtn) {
-      const card = orderBtn.closest('.bouquet-card');
-      if (card) {
-        openModal({
-          title: card.dataset.title,
-          price: card.dataset.price,
-          description: card.dataset.desc,
-          image: card.dataset.img,
-          image2x: card.dataset.img2x
-        });
-      } else {
-        openModal({
-          title: 'Custom Order',
-          price: '55',
-          description: 'Our floral artists will handcraft a personalized bouquet according to your preferences.',
-          image: './image/wonderful-flowers@1x.jpg',
-          image2x: './image/wonderful-flowers@2x.jpg'
-        });
+  // Backdrop and Close button click for all modals
+  document.querySelectorAll('.modal-background').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.closest('[data-modal-close], .close-modal-button')) {
+        closeAllModals();
       }
+    });
+  });
+
+  // Global click delegator
+  document.addEventListener('click', (e) => {
+    // Header / Hero / Mobile menu order button -> Open Order Modal
+    const orderBtn = e.target.closest('.order-button, .hero-button, .menu-action-button');
+    if (orderBtn) {
+      e.preventDefault();
+      openOrderModal();
+      return;
+    }
+
+    // "Buy now" inside Product Details modal -> Open Order Modal
+    const buyNowInModal = e.target.closest('#modal-buy-now-btn');
+    if (buyNowInModal) {
+      e.preventDefault();
+      openOrderModal();
+      return;
+    }
+
+    // Bouquet item click (in Bestsellers or Catalog) -> Open Product Details Modal
+    const bouquetCard = e.target.closest('.bouquet-card, .products-item');
+    if (bouquetCard && !e.target.closest('button')) {
+      const title = bouquetCard.dataset.title || bouquetCard.querySelector('.products-description, .catalog-name')?.textContent?.trim();
+      const priceRaw = bouquetCard.dataset.price || bouquetCard.querySelector('.products-text, .catalog-price')?.textContent?.trim();
+      const price = priceRaw ? priceRaw.replace('$', '') : '35';
+      const description = bouquetCard.dataset.desc || 'Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring. Whether you’re celebrating a birthday, sending love, or simply brightening someone’s day, this arrangement is sure to bring warm smiles and lasting impressions.';
+      const img = bouquetCard.dataset.img || bouquetCard.querySelector('img')?.src;
+      const img2x = bouquetCard.dataset.img2x || img;
+
+      openProductDetails({ title, price, description, image: img, image2x: img2x });
     }
   });
 
-  // Order form submit handling
-  if (orderForm) {
-    orderForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(orderForm);
-      const name = formData.get('user-name');
-      alert(`Thank you, ${name || 'customer'}! Your order has been placed successfully.`);
-      orderForm.reset();
-      closeModal();
-    });
-  }
-
-  // Footer subscription form handling
-  const subscribeForm = document.querySelector('.footer-subscribe-form');
-  if (subscribeForm) {
-    subscribeForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = subscribeForm.querySelector('input[type="email"]');
-      alert(`Thank you for subscribing! Confirmation sent to ${emailInput.value}.`);
-      subscribeForm.reset();
-    });
+  // Form submission inside Order Modal
+  if (orderModal) {
+    const form = orderModal.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const name = formData.get('user-name') || 'Customer';
+        alert(`Thank you, ${name}! Your order has been placed successfully.`);
+        form.reset();
+        closeAllModals();
+      });
+    }
   }
 }

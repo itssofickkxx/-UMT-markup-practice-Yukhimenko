@@ -1,4 +1,4 @@
-// js/render.js - Dynamic template string markup generator and insertAdjacentHTML rendering
+// js/render.js - Bouquet card template without extra button under each card
 
 export function createBouquetCardMarkup(bouquet) {
   const { id, title, price, description, image, image2x } = bouquet;
@@ -17,7 +17,6 @@ export function createBouquetCardMarkup(bouquet) {
       </div>
       <h3 class="catalog-name">${title}</h3>
       <p class="catalog-price">$${price}</p>
-      <button class="catalog-buy-btn order-bouquet-btn" type="button" data-id="${id}">Order Now</button>
     </li>
   `;
 }

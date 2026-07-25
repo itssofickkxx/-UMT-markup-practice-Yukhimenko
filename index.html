@@ -60,7 +60,7 @@
         <div class="container" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="section-title products-title">Top-Selling Bouquets</h2>
             <ul class="products-list">
-                <li class="products-item">
+                <li class="products-item bouquet-card" data-title="Spring Elegance" data-price="35" data-desc="Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring." data-img="./image/wonderful-flowers@1x.jpg" data-img2x="./image/wonderful-flowers@2x.jpg">
                     <img class="products-image" 
                          src="./image/wonderful-flowers@1x.jpg" 
                          srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" 
@@ -68,7 +68,7 @@
                     <h3 class="products-description">Spring Elegance</h3>
                     <p class="products-text">$35</p>
                 </li>
-                <li class="products-item">
+                <li class="products-item bouquet-card" data-title="Berry Chic" data-price="40" data-desc="Chic arrangement with deep rich hues, delicate roses and fragrant blossoms." data-img="./image/wedding-flowers@1x.jpg" data-img2x="./image/wedding-flowers@2x.jpg">
                     <img class="products-image" 
                          src="./image/wedding-flowers@1x.jpg" 
                          srcset="./image/wedding-flowers@1x.jpg 1x, ./image/wedding-flowers@2x.jpg 2x" 
@@ -76,7 +76,7 @@
                     <h3 class="products-description">Berry Chic</h3>
                     <p class="products-text">$40</p>
                  </li>
-                <li class="products-item">
+                <li class="products-item bouquet-card" data-title="Lavender Dream" data-price="55" data-desc="Soothing lavender tones for peaceful elegance and long-lasting joy." data-img="./image/flower-bouquet@1x.jpg" data-img2x="./image/flower-bouquet@2x.jpg">
                     <img class="products-image" 
                          src="./image/flower-bouquet@1x.jpg" 
                          srcset="./image/flower-bouquet@1x.jpg 1x, ./image/flower-bouquet@2x.jpg 2x" 
@@ -111,28 +111,13 @@
             <h2 class="section-title products-title">Bouquets</h2>
             <p class="catalog-description">Explore our stunning selection of fresh flower bouquets.</p>
 
-            <!-- Filter & Search Controls -->
-            <div class="catalog-controls">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" type="button" data-category="all">All</button>
-                    <button class="filter-btn" type="button" data-category="roses">Roses</button>
-                    <button class="filter-btn" type="button" data-category="romance">Romance</button>
-                    <button class="filter-btn" type="button" data-category="exotic">Exotic</button>
-                    <button class="filter-btn" type="button" data-category="wild">Wild</button>
-                </div>
-                <div class="search-box">
-                    <label for="catalog-search-input" class="visually-hidden">Search bouquets</label>
-                    <input type="text" id="catalog-search-input" class="search-input" placeholder="Search bouquet by name..." />
-                </div>
-            </div>
-
             <!-- Status & Error Notifications -->
             <div id="catalog-status-message" class="catalog-status-message"></div>
 
             <!-- Dynamic Catalog List -->
             <ul class="catalog-list" id="catalog-list"></ul>
 
-            <!-- Load More Button -->
+            <!-- Pagination Button -->
             <button class="catalog-button" id="catalog-button" type="button">Show More</button>
         </div>
     </section> 
@@ -210,16 +195,6 @@
         <a class="nav-link" href="#contacts">Contacts</a>
     </nav>
     </div>
-        <!-- Semantic Subscription Form -->
-        <div class="footer-subscribe-wrapper">
-            <h3 class="footer-subscribe-title">Subscribe to our newsletter</h3>
-            <form class="footer-subscribe-form">
-                <label for="footer-email-input" class="visually-hidden">Your Email</label>
-                <input type="email" id="footer-email-input" name="user-email" required placeholder="Enter your email address" class="footer-email-input" />
-                <button type="submit" class="footer-subscribe-btn">Subscribe</button>
-            </form>
-        </div>
-
         <ul class="list-footer">
             <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon-footer"><use href="./icons/facebook-sprite.svg#Facebook"></use></svg></a></li>
             <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon-footer"><use href="./icons/instagram-sprite.svg#Instagram"></use></svg></a></li>
@@ -242,45 +217,55 @@
         <button class="menu-action-button" type="button">Explore Bouquets</button>
    </div>
 
-   <!-- Modal Order Window -->
-   <div class="modal-background" id="detail-modal">
-    <div class="modal-container modal-container-content">
-        <button type="button" id="close-modal-button" class="close-modal-button" aria-label="Close modal">
+   <!-- Modal 1: Header Order Modal -->
+   <div class="modal-background" id="header-order-modal">
+    <div class="modal-container order-modal-box">
+        <button type="button" class="close-modal-button" data-modal-close aria-label="Close modal">
             <svg width="14" height="14"><use href="./icons/close.svg#icon"></use></svg>
         </button>
-        <div class="detail-modal-content-wrapper">
-            <div id="detail-modal-content" class="detail-modal-content">
-                <img id="modal-img" src="./image/wonderful-flowers@1x.jpg" srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" alt="Bouquet preview" class="detail-modal-image" />
-                <div class="detail-modal-text-wrapper">
-                    <h2 id="modal-title" class="detail-modal-title">Spring Elegance</h2>
-                    <p id="modal-price" class="detail-modal-price">$35</p>
-                    <p id="modal-desc" class="detail-modal-description">Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring.</p>
-              
-                    <!-- Semantic Order Form -->
-                    <form class="modal-order-form">
-                        <div class="form-group">
-                            <label for="order-user-name" class="modal-form-label">Full Name</label>
-                            <input type="text" id="order-user-name" name="user-name" required placeholder="Enter your full name" class="modal-form-input" />
-                        </div>
-                        <div class="form-group">
-                            <label for="order-user-phone" class="modal-form-label">Phone Number</label>
-                            <input type="tel" id="order-user-phone" name="user-phone" required placeholder="+380 (99) 000-0000" class="modal-form-input" />
-                        </div>
-                        <div class="form-group">
-                            <label for="order-user-email" class="modal-form-label">Email</label>
-                            <input type="email" id="order-user-email" name="user-email" required placeholder="example@mail.com" class="modal-form-input" />
-                        </div>
-                        <div class="form-group">
-                            <label class="modal-checkbox-label">
-                                <input type="checkbox" name="user-agreement" required class="visually-hidden" />
-                                <span class="custom-checkbox">
-                                    <svg class="checkbox-icon" width="12" height="12"><use href="./icons/close.svg#icon"></use></svg>
-                                </span>
-                                <span class="checkbox-text">I agree to the privacy policy & license terms</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="modal-button-action">Order Now</button>
-                    </form>
+        <h2 class="order-modal-title">Order</h2>
+        <form class="order-modal-form">
+            <div class="order-form-group">
+                <label for="order-name" class="order-field-label">Name*</label>
+                <input type="text" id="order-name" name="user-name" required placeholder="Ann" class="order-field-input" />
+            </div>
+            <div class="order-form-group">
+                <label for="order-phone" class="order-field-label">Phone*</label>
+                <input type="tel" id="order-phone" name="user-phone" required placeholder="+1 (555) 123-4567" class="order-field-input" />
+            </div>
+            <div class="order-form-group">
+                <label for="order-address" class="order-field-label">Adress*</label>
+                <input type="text" id="order-address" name="user-address" required placeholder="456 Floral Ave, Sydney NSW 2000 AU" class="order-field-input" />
+            </div>
+            <div class="order-form-group">
+                <label for="order-message" class="order-field-label">Message</label>
+                <textarea id="order-message" name="user-message" placeholder="Type your message..." class="order-field-textarea" rows="4"></textarea>
+            </div>
+            <div class="order-btn-center">
+                <button type="submit" class="order-checkout-btn">Go to Checkout</button>
+            </div>
+        </form>
+    </div>
+   </div>
+
+   <!-- Modal 2: Product Details Modal -->
+   <div class="modal-background" id="detail-modal">
+    <div class="modal-container product-details-box">
+        <button type="button" class="close-modal-button" data-modal-close aria-label="Close modal">
+            <svg width="14" height="14"><use href="./icons/close.svg#icon"></use></svg>
+        </button>
+        <div class="product-details-flex">
+            <div class="product-details-img-col">
+                <img id="modal-img" src="./image/wonderful-flowers@1x.jpg" srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" alt="Bouquet preview" class="product-details-img" />
+            </div>
+            <div class="product-details-info-col">
+                <h2 id="modal-title" class="product-details-title">Spring Elegance</h2>
+                <p id="modal-price" class="product-details-price">$35</p>
+                <p id="modal-desc" class="product-details-desc">Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring. Whether you’re celebrating a birthday, sending love, or simply brightening someone’s day, this arrangement is sure to bring warm smiles and lasting impressions.</p>
+                
+                <div class="product-action-row">
+                    <button type="button" id="modal-buy-now-btn" class="product-buy-now-btn">Buy now</button>
+                    <input type="number" id="modal-qty-input" class="product-qty-input" value="1" min="1" />
                 </div>
             </div>
         </div>
