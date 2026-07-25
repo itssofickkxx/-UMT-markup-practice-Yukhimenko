@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flora</title>
+    <title>Flora — Flower Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
             <a class="nav-link menu-navigation-link" href="#contacts">Contacts</a>
         </nav>
     <button class="order-button" type="button">Explore Bouquets</button>
-    <button class="burger-menu"aria-expanded="false" aria-controls="mobile menu" data-menu-button>
+    <button class="burger-menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-button aria-label="Toggle mobile menu">
         <svg aria-label="mobile menu toggle">
             <use href="./icons/menu.svg#menu" class="menu-icon-burger"></use>
             <use href="./icons/close.svg#icon" class="menu-icon-close"></use>
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="hero-container" data-aos="fade-right" data-aos-duration="500">
             <h1 class="section-title">Brighten Your Day with Our Stunning Bouquets</h1>
-            <p class="hero-description">At Flora, we believe that every occasion deserves a beautiful bouquet.Our expertly crafted arrangements are designed to bring joy and elegance to your celebrations.</p>
+            <p class="hero-description">At Flora, we believe that every occasion deserves a beautiful bouquet. Our expertly crafted arrangements are designed to bring joy and elegance to your celebrations.</p>
             <button class="hero-button" type="button">Explore Our Bestsellers</button>
             </div>
         </div>
@@ -49,7 +49,10 @@
             <h2 class="section-title">Our Passion for Floral Artistry</h2>
             <p class="about-description">At Flora, we believe that every bouquet tells a story. Our team meticulously crafts each arrangement, blending creativity with the freshest blooms to create stunning pieces for every occasion.</p>
             </div>
-            <img class="about-image" data-aos="fade-left" data-aos-duration="500" src="./image/florist-arranging.jpg" alt="Female"/>
+            <img class="about-image" data-aos="fade-left" data-aos-duration="500" 
+                 src="./image/florist-arranging@1x.jpg" 
+                 srcset="./image/florist-arranging@1x.jpg 1x, ./image/florist-arranging@2x.jpg 2x" 
+                 alt="Florist arranging fresh flowers" />
             </div>
         </div>
     </section>
@@ -58,17 +61,26 @@
             <h2 class="section-title products-title">Top-Selling Bouquets</h2>
             <ul class="products-list">
                 <li class="products-item">
-                    <img class="products-image" src="./image/wonderful-flowers.jpg" alt="perfect-grift"/>
+                    <img class="products-image" 
+                         src="./image/wonderful-flowers@1x.jpg" 
+                         srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" 
+                         alt="Spring Elegance bouquet" />
                     <h3 class="products-description">Spring Elegance</h3>
                     <p class="products-text">$35</p>
                 </li>
-                    <li class="products-item">
-                    <img class="products-image" src="./image/wedding-flowers.jpg" alt="wedding-flowers"/>
+                <li class="products-item">
+                    <img class="products-image" 
+                         src="./image/wedding-flowers@1x.jpg" 
+                         srcset="./image/wedding-flowers@1x.jpg 1x, ./image/wedding-flowers@2x.jpg 2x" 
+                         alt="Berry Chic bouquet" />
                     <h3 class="products-description">Berry Chic</h3>
                     <p class="products-text">$40</p>
                  </li>
-                    <li class="products-item">
-                    <img class="products-image" src="./image/flower-bouquet.jpg" alt="mixed-flower"/>
+                <li class="products-item">
+                    <img class="products-image" 
+                         src="./image/flower-bouquet@1x.jpg" 
+                         srcset="./image/flower-bouquet@1x.jpg 1x, ./image/flower-bouquet@2x.jpg 2x" 
+                         alt="Lavender Dream bouquet" />
                     <h3 class="products-description">Lavender Dream</h3>
                     <p class="products-text">$55</p>
                 </li>
@@ -84,10 +96,10 @@
             </div>
 
             <div class="reviews-arrows">
-                <button class="reviews-arrow-btn" type="button">
+                <button class="reviews-arrow-btn" type="button" aria-label="Previous review">
                     <svg width="24" height="24"><use href="./icons/left-sprite.svg#left-arrow-alt"></use></svg>
                 </button>
-                <button class="reviews-arrow-btn" type="button">
+                <button class="reviews-arrow-btn" type="button" aria-label="Next review">
                     <svg width="24" height="24"><use href="./icons/right-sprite.svg#right-arrow-alt"></use></svg>
                 </button>
             </div>
@@ -95,52 +107,33 @@
             </div>
      </section>
      <section class="section-wrapper" id="bouquets">
-        <div class="container container-catalog"  data-aos="zoom-in" data-aos-duration="1000">
+        <div class="container container-catalog" data-aos="zoom-in" data-aos-duration="1000">
             <h2 class="section-title products-title">Bouquets</h2>
             <p class="catalog-description">Explore our stunning selection of fresh flower bouquets.</p>
-            <ul class="catalog-list">
-                <li class="catalog-item">
-                    <img class="catalog-image" src="./image/side-view-rose.jpg" alt="saide-view-rose"/>
-                <h3 class="catalog-name">Peach Meadow</h3>
-                <p class="catalog-price">$55</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/florist-makes.jpg" alt="florist-makes"/>
-                <h3 class="catalog-name">Blush Romance</h3>
-                <p class="catalog-price">$34</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/big-basket.jpg" alt="big-basket-mixed"/>
-                <h3 class="catalog-name">Pastel Garden</h3>
-                <p class="catalog-price">$40</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/flower-composition.jpg" alt="mixed-flower-composition"/>
-                <h3 class="catalog-name">Tulip Charm</h3>
-                <p class="catalog-price">$61</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/exotic-flowers.jpg" alt="exotic-rustic"/>
-                <h3 class="catalog-name">Berry Bloom</h3>
-                <p class="catalog-price">$32</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/colorful-flowers.jpg" alt="basket-filled"/>
-                <h3 class="catalog-name">Sweet Whisper</h3>
-                <p class="catalog-price">$40</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/wild-flowers.jpg" alt="wild-flowers"/>
-                <h3 class="catalog-name">Field Joy</h3>
-                <p class="catalog-price">$49</p>
-            </li>
-            <li class="catalog-item">
-                <img class="catalog-image" src="./image/bouquet-decorated.jpg" alt="close-up-bouquet"/>
-                <h3 class="catalog-name">Soft Bloom</h3>
-                <p class="catalog-price">$37</p>
-            </li>
-        </ul>
-        <button class="catalog-button" type="button">Show More</button>
+
+            <!-- Filter & Search Controls -->
+            <div class="catalog-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" type="button" data-category="all">All</button>
+                    <button class="filter-btn" type="button" data-category="roses">Roses</button>
+                    <button class="filter-btn" type="button" data-category="romance">Romance</button>
+                    <button class="filter-btn" type="button" data-category="exotic">Exotic</button>
+                    <button class="filter-btn" type="button" data-category="wild">Wild</button>
+                </div>
+                <div class="search-box">
+                    <label for="catalog-search-input" class="visually-hidden">Search bouquets</label>
+                    <input type="text" id="catalog-search-input" class="search-input" placeholder="Search bouquet by name..." />
+                </div>
+            </div>
+
+            <!-- Status & Error Notifications -->
+            <div id="catalog-status-message" class="catalog-status-message"></div>
+
+            <!-- Dynamic Catalog List -->
+            <ul class="catalog-list" id="catalog-list"></ul>
+
+            <!-- Load More Button -->
+            <button class="catalog-button" id="catalog-button" type="button">Show More</button>
         </div>
     </section> 
     <section class="section-wrapper" id="feedback">
@@ -161,10 +154,10 @@
             </li>
         </ul>
         <div class="container-button-feedback">
-        <button class="feedback-button" type="button">
+        <button class="feedback-button" type="button" aria-label="Previous feedback">
           <svg width="24" height="24"><use href="./icons/left-sprite.svg#left-arrow-alt"></use></svg>
         </button>
-        <button class="feedback-button" type="button">
+        <button class="feedback-button" type="button" aria-label="Next feedback">
             <svg width="24" height="24"><use href="./icons/right-sprite.svg#right-arrow-alt"></use></svg>
         </button>
         </div>
@@ -188,7 +181,7 @@
                     </div>
                 </li>
                 <li class="address-item">
-                    <svg  class="icon-contact" width="24" height="24"><use href="./icons/map-sprite.svg#map"></use></svg>
+                    <svg class="icon-contact" width="24" height="24"><use href="./icons/map-sprite.svg#map"></use></svg>
                     <div class="contact-content">
                     <p class="contact-list-label">Store</p>
                     <p class="contact-list-text">456 Floral Ave, Sydney NSW 2000 AU</p>
@@ -197,12 +190,15 @@
             </ul>
         </address>
         </div>
-        <img class="contact-image" src="./image/florist-holding.jpg" alt="florist-holding"/>
+        <img class="contact-image" 
+             src="./image/florist-holding@1x.jpg" 
+             srcset="./image/florist-holding@1x.jpg 1x, ./image/florist-holding@2x.jpg 2x" 
+             alt="Florist holding bouquet" />
         </div>
     </section>
    </main>
    <footer class="footer">
-    <div class="container" data-aos="fade-up"data-aos-duration="2000">
+    <div class="container" data-aos="fade-up" data-aos-duration="2000">
     <div class="footer-container">
     <div class="logo-nav-container">
    <svg class="footer-logo"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
@@ -211,20 +207,31 @@
         <a class="nav-link" href="#bestsellers">Bestsellers</a>
         <a class="nav-link" href="#bouquets">Bouquets</a>
         <a class="nav-link" href="#feedback">Feedback</a>
-        <a class="nav-link" href="#contact">Contacts</a>
+        <a class="nav-link" href="#contacts">Contacts</a>
     </nav>
     </div>
+        <!-- Semantic Subscription Form -->
+        <div class="footer-subscribe-wrapper">
+            <h3 class="footer-subscribe-title">Subscribe to our newsletter</h3>
+            <form class="footer-subscribe-form">
+                <label for="footer-email-input" class="visually-hidden">Your Email</label>
+                <input type="email" id="footer-email-input" name="user-email" required placeholder="Enter your email address" class="footer-email-input" />
+                <button type="submit" class="footer-subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+
         <ul class="list-footer">
-            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><svg class="icon-footer"><use href="./icons/facebook-sprite.svg#Facebook"></use></svg></a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><svg class="icon-footer"><use href="./icons/instagram-sprite.svg#Instagram"></use></svg></a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><svg class="icon-footer"><use href="./icons/twitter-sprite.svg#X"></use></svg></a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon-footer"><use href="./icons/facebook-sprite.svg#Facebook"></use></svg></a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon-footer"><use href="./icons/instagram-sprite.svg#Instagram"></use></svg></a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><svg class="icon-footer"><use href="./icons/twitter-sprite.svg#X"></use></svg></a></li>
         </ul>
     </div>
     <p class="footer-text">© 2025 Flora. All rights reserved.</p>
-    
     </div>
    </footer>
-   <div class="mobile-menu" id="mobile-menu" aria-labelledby="mobile menu toggle" data-menu>
+
+   <!-- Mobile Menu -->
+   <div class="mobile-menu" id="mobile-menu" aria-labelledby="mobile-menu-toggle" data-menu>
         <nav class="navigation-burger">
             <a class="nav-link menu-navigation-link" href="#about">About Us</a>
             <a class="nav-link menu-navigation-link" href="#bestsellers">Bestsellers</a>
@@ -235,33 +242,56 @@
         <button class="menu-action-button" type="button">Explore Bouquets</button>
    </div>
 
-   <!-- <div class="modal-background" id="detail-modal">
-   <div class="modal-container modal-container-content">
-    <button type="button" id="close-modal-button" class="close-modal-button">
-        <svg><use href="./icons/close.svg#icon"></use></svg>
-    </button>
-    <div class="detail-modal-content-wrapper">
-        <div id="detail-modal-content" class="detail-modal-content">
-            <img src="./image/wonderful-flowers.jpg" alt="wonderful-flowers" class="detail-modal-image">
+   <!-- Modal Order Window -->
+   <div class="modal-background" id="detail-modal">
+    <div class="modal-container modal-container-content">
+        <button type="button" id="close-modal-button" class="close-modal-button" aria-label="Close modal">
+            <svg width="14" height="14"><use href="./icons/close.svg#icon"></use></svg>
+        </button>
+        <div class="detail-modal-content-wrapper">
+            <div id="detail-modal-content" class="detail-modal-content">
+                <img id="modal-img" src="./image/wonderful-flowers@1x.jpg" srcset="./image/wonderful-flowers@1x.jpg 1x, ./image/wonderful-flowers@2x.jpg 2x" alt="Bouquet preview" class="detail-modal-image" />
                 <div class="detail-modal-text-wrapper">
-                <h2 class="detail-modal-title ">Spring Elegance</h2>
-                <p class="detail-modal-price">$35 </p>
-                <p class="detail-modal-description">Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring. Whether you’re celebrating a birthday, sending love, or simply brightening someone’s day, this arrangement is sure to bring warm smiles and lasting impressions.</p>
-          
-             <div class="detail-modal-button-container">
-                <button class="modal-button-action" type="button">Buy now</button>
-                <label for="quantity" class="modal-quantity-label">
-                <input type="number" id="quantity" class="modal-quantity-input" value="1" min="1">
-                </label>
-            </div>
+                    <h2 id="modal-title" class="detail-modal-title">Spring Elegance</h2>
+                    <p id="modal-price" class="detail-modal-price">$35</p>
+                    <p id="modal-desc" class="detail-modal-description">Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring.</p>
+              
+                    <!-- Semantic Order Form -->
+                    <form class="modal-order-form">
+                        <div class="form-group">
+                            <label for="order-user-name" class="modal-form-label">Full Name</label>
+                            <input type="text" id="order-user-name" name="user-name" required placeholder="Enter your full name" class="modal-form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label for="order-user-phone" class="modal-form-label">Phone Number</label>
+                            <input type="tel" id="order-user-phone" name="user-phone" required placeholder="+380 (99) 000-0000" class="modal-form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label for="order-user-email" class="modal-form-label">Email</label>
+                            <input type="email" id="order-user-email" name="user-email" required placeholder="example@mail.com" class="modal-form-input" />
+                        </div>
+                        <div class="form-group">
+                            <label class="modal-checkbox-label">
+                                <input type="checkbox" name="user-agreement" required class="visually-hidden" />
+                                <span class="custom-checkbox">
+                                    <svg class="checkbox-icon" width="12" height="12"><use href="./icons/close.svg#icon"></use></svg>
+                                </span>
+                                <span class="checkbox-text">I agree to the privacy policy & license terms</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="modal-button-action">Order Now</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
    </div>
-   </div> -->
 
+   <!-- External Libraries & Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
    <script src="./js/script.js"></script>
    <script src="./js/mobile-menu.js"></script>
+   <script type="module" src="./js/catalog.js"></script>
 </body>
 </html>

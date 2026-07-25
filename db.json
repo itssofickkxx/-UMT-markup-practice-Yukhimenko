@@ -1,0 +1,112 @@
+{
+  "bouquets": [
+    {
+      "id": "1",
+      "title": "Peach Meadow",
+      "price": 55,
+      "category": "roses",
+      "description": "Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring.",
+      "image": "./image/side-view-rose@1x.jpg",
+      "image2x": "./image/side-view-rose@2x.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Blush Romance",
+      "price": 34,
+      "category": "romance",
+      "description": "Soft pink tones for unforgettable romantic moments and warm smiles.",
+      "image": "./image/florist-makes@1x.jpg",
+      "image2x": "./image/florist-makes@2x.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Pastel Garden",
+      "price": 40,
+      "category": "mixed",
+      "description": "Harmonious blend of pastel flowers arranged with creative flair.",
+      "image": "./image/big-basket@1x.jpg",
+      "image2x": "./image/big-basket@2x.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Tulip Charm",
+      "price": 61,
+      "category": "tulips",
+      "description": "Vibrant tulips hand-picked for perfection and lasting beauty.",
+      "image": "./image/flower-composition@1x.jpg",
+      "image2x": "./image/flower-composition@2x.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Berry Bloom",
+      "price": 32,
+      "category": "exotic",
+      "description": "Exotic arrangement with rich berry highlights and fresh greenery.",
+      "image": "./image/exotic-flowers@1x.jpg",
+      "image2x": "./image/exotic-flowers@2x.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Sweet Whisper",
+      "price": 40,
+      "category": "mixed",
+      "description": "Gentle floral whisper wrapped in elegant eco-paper.",
+      "image": "./image/colorful-flowers@1x.jpg",
+      "image2x": "./image/colorful-flowers@2x.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Field Joy",
+      "price": 49,
+      "category": "wild",
+      "description": "Fresh wild flowers bringing natural countryside warmth into your home.",
+      "image": "./image/wild-flowers@1x.jpg",
+      "image2x": "./image/wild-flowers@2x.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Soft Bloom",
+      "price": 37,
+      "category": "romance",
+      "description": "Delicate close-up arrangement for subtle gestures of love and care.",
+      "image": "./image/bouquet-decorated@1x.jpg",
+      "image2x": "./image/bouquet-decorated@2x.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Spring Elegance",
+      "price": 35,
+      "category": "spring",
+      "description": "Radiating freshness and gentle spring charm for any occasion.",
+      "image": "./image/wonderful-flowers@1x.jpg",
+      "image2x": "./image/wonderful-flowers@2x.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Berry Chic",
+      "price": 40,
+      "category": "exotic",
+      "description": "Chic arrangement with deep rich hues and fragrant blossoms.",
+      "image": "./image/wedding-flowers@1x.jpg",
+      "image2x": "./image/wedding-flowers@2x.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Lavender Dream",
+      "price": 55,
+      "category": "wild",
+      "description": "Soothing lavender tones for peaceful elegance and joy.",
+      "image": "./image/flower-bouquet@1x.jpg",
+      "image2x": "./image/flower-bouquet@2x.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Royal Sunset",
+      "price": 65,
+      "category": "roses",
+      "description": "Warm orange and red rose sunset composition.",
+      "image": "./image/hero@1x.jpg",
+      "image2x": "./image/hero@2x.jpg"
+    }
+  ]
+}

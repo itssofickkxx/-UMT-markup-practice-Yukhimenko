@@ -10,4 +10,6 @@
     --color-btn-active: #fff;
     --background-reviews-hover: #D9FBCF;
     --background-reviews-active: #7AF259;
+    --background-modal: rgba(0, 0, 0, 0.25);
+    --border-modal-text:  rgba(3, 12, 1, 0.15);
 }
