@@ -429,30 +429,39 @@ h1,h2,h3{
     height: calc(100vh - 64px);
     width: 100vw;
     z-index: 3;
-    padding: 0 20px 16px 20px;
+    padding: 24px 20px 32px 20px;
     overflow-y: auto;
     transition: transform 300ms ease-in-out;
     background: #fff;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 24px;
 }
 .navigation-burger{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 }
 .menu-action-button{
-    font-weight: 500;
-    font-size: var(--font-size-sm); 
-    padding: 8px 20px;
-    background: var(--background-button);
+    font-weight: 600;
+    font-size: 14px; 
+    padding: 12px 20px;
+    background: #b2f200;
+    color: #111;
     border-radius: 100px;
+    border: none;
     outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 24px;
-    max-width: 335px;
+    margin-top: 8px;
+    max-width: 100%;
     width: 100%;
+    cursor: pointer;
+    transition: opacity 250ms ease-in-out;
+}
+.menu-action-button:hover,
+.menu-action-button:focus {
+    opacity: 0.9;
 }
 .menu-icon-burger{
     opacity: 1;
