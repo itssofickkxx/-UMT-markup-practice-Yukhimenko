@@ -431,7 +431,7 @@ h1,h2,h3{
     height: calc(100vh - 64px);
     width: 100vw;
     z-index: 3;
-    padding: 24px 20px 32px 20px;
+    padding: 0 20px 32px 20px;
     overflow-y: auto;
     transition: transform 300ms ease-in-out;
     background: #fff;
@@ -470,8 +470,8 @@ h1,h2,h3{
     transition: opacity 250ms ease-in-out;
 }
 .menu-icon-close{
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
     opacity: 0;
     transition: opacity 250ms ease-in-out;
 }
