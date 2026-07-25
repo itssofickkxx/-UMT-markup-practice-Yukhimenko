@@ -24,15 +24,15 @@
         </nav>
     <button class="order-button" type="button">Explore Bouquets</button>
     <button class="burger-menu"aria-expanded="false" aria-controls="mobile menu" data-menu-button>
-        <svg width="24px" height="24px" aria-label="mobile menu toggle">
+        <svg aria-label="mobile menu toggle">
             <use href="./icons/menu.svg#menu" class="menu-icon-burger"></use>
             <use href="./icons/close.svg#icon" class="menu-icon-close"></use>
         </svg>
     </button>
     </div> 
 </header>
-   <main>
-    <section class="hero-wrapper">
+   <main> 
+     <section class="hero-wrapper">
         <div class="container">
             <div class="hero-container" data-aos="fade-right" data-aos-duration="500">
             <h1 class="section-title">Brighten Your Day with Our Stunning Bouquets</h1>
@@ -207,11 +207,11 @@
     <div class="logo-nav-container">
    <svg class="footer-logo"><use href="./image/logo-sprite.svg#Company Logo"></use></svg>
     <nav class="navigation-footer">
-        <a class="nav-link" href="">About Us</a>
-        <a class="nav-link" href="">Bestsellers</a>
-        <a class="nav-link" href="">Bouquets</a>
-        <a class="nav-link" href="">Feedback</a>
-        <a class="nav-link" href="">Contacts</a>
+        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#bestsellers">Bestsellers</a>
+        <a class="nav-link" href="#bouquets">Bouquets</a>
+        <a class="nav-link" href="#feedback">Feedback</a>
+        <a class="nav-link" href="#contact">Contacts</a>
     </nav>
     </div>
         <ul class="list-footer">
@@ -226,16 +226,42 @@
    </footer>
    <div class="mobile-menu" id="mobile-menu" aria-labelledby="mobile menu toggle" data-menu>
         <nav class="navigation-burger">
-            <a class="nav-link" href="#about">About Us</a>
-            <a class="nav-link" href="#bestsellers">Bestsellers</a>
-            <a class="nav-link" href="#bouquets">Bouquets</a>
-            <a class="nav-link" href="#feedback">Feedback</a>
-            <a class="nav-link" href="#contacts">Contacts</a>
+            <a class="nav-link menu-navigation-link" href="#about">About Us</a>
+            <a class="nav-link menu-navigation-link" href="#bestsellers">Bestsellers</a>
+            <a class="nav-link menu-navigation-link" href="#bouquets">Bouquets</a>
+            <a class="nav-link menu-navigation-link" href="#feedback">Feedback</a>
+            <a class="nav-link menu-navigation-link" href="#contacts">Contacts</a>
         </nav>
         <button class="menu-action-button" type="button">Explore Bouquets</button>
    </div>
+
+   <!-- <div class="modal-background" id="detail-modal">
+   <div class="modal-container modal-container-content">
+    <button type="button" id="close-modal-button" class="close-modal-button">
+        <svg><use href="./icons/close.svg#icon"></use></svg>
+    </button>
+    <div class="detail-modal-content-wrapper">
+        <div id="detail-modal-content" class="detail-modal-content">
+            <img src="./image/wonderful-flowers.jpg" alt="wonderful-flowers" class="detail-modal-image">
+                <div class="detail-modal-text-wrapper">
+                <h2 class="detail-modal-title ">Spring Elegance</h2>
+                <p class="detail-modal-price">$35 </p>
+                <p class="detail-modal-description">Each stem is carefully selected to create a bouquet that radiates freshness, elegance, and the gentle charm of spring. Whether you’re celebrating a birthday, sending love, or simply brightening someone’s day, this arrangement is sure to bring warm smiles and lasting impressions.</p>
+          
+             <div class="detail-modal-button-container">
+                <button class="modal-button-action" type="button">Buy now</button>
+                <label for="quantity" class="modal-quantity-label">
+                <input type="number" id="quantity" class="modal-quantity-input" value="1" min="1">
+                </label>
+            </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   </div> -->
+
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
-   <script src="./script.js"></script>
+   <script src="./js/script.js"></script>
    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
